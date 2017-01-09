@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  front_end:
+    build: ./nginx
+    ports:
+      - "8000:80"
+  sanic:
+    build: ./sanic
+    expose:
+      - "80"
